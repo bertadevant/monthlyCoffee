@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	{% include "monthlycoffee/includes/header.html" %}
+	<body class="is-preload">
+    {% block content %}
+    {% endblock %}
+
+    {% include "monthlycoffee/includes/footer.html" %}
+    <!-- Scripts -->
+			<script src="{% static 'monthlycoffee/js/jquery.min.js' %}"></script>
+			<script src="{% static 'monthlycoffee/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'monthlycoffee/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'monthlycoffee/js/browser.min.js' %}"></script>
+			<script src="{% static 'monthlycoffee/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'monthlycoffee/js/util.js' %}"></script>
+			<script src="{% static 'monthlycoffee/js/main.js' %}"></script>
+    </body>
+</html>

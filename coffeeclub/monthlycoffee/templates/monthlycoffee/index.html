@@ -1,0 +1,30 @@
+{% extends "monthlycoffee/includes/base.html" %}
+{% block content %}
+    <div id="wrapper" class="divided">
+    {% if roasters and last_month_roaster and banner_url %}
+        <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+            <div class="content">
+                <h1>Last Month Coffee</h1>
+                <h3>
+                    <a href="{{ last_month_roaster.website }}" class="major" target="_blank" rel="noopener noreferrer">{{ last_month_roaster.name }}</a>
+                </h3>
+                <span class="image fit right small"><img src="{{ last_month_roaster.image_ref }}" alt=""></span>
+                <p>{{ last_month_roaster.rating }} / 5 </p>
+                <blockquote><i>{{ last_month_roaster.last_feedback }}.</i></blockquote>
+                <form method="post" action="{% url 'submit_action' last_month_roaster.id %}">
+                    {% csrf_token %}
+                    <ul class="actions fit">
+                        <!-- Add Action for rating -->
+                        <li><input id="rate" type="submit" name="Rate" value="Rate the Coffee"></li>
+                        <li><input id="choose_next_roaster" type="submit" class="primary" name="Next" value="Choose Next Roaster!"></li>
+                    </ul>
+                </form>
+            </div>
+            <div class="image fit">
+                <img src="{{ banner_url }}" alt="" />
+            </div>
+        </section>
+        {% include 'monthlycoffee/gallery.html' with roaster=roasters %}
+    {% endif %}
+    </div>
+{% endblock %}
