@@ -3,7 +3,7 @@ from . import get_roasters_data
 
 def save_new_rating(roaster_id, score, review):
     roaster = get_roasters_data.get_roaster(roaster_id)
-    rating = Rating.objects.create(roaster=roaster, rating=score, review=review)
+    rating = Rating.objects.create(roaster=roaster, score=score, review=review)
 
 def transfer_last_time_tag(new_roaster_id, last_roaster_id):
     new_roaster = get_roasters_data.get_roaster(new_roaster_id)

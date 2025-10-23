@@ -15,7 +15,7 @@ def index(request):
     template = 'monthlycoffee/index.html'
     context = {
         "roasters": roasters,
-        "last_month_roaster": roaster,
+        "last_month_roaster": roaster if roaster else None,
         "banner_url": banner_url
     }
     return render(request, template, context)

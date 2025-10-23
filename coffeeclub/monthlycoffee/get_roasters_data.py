@@ -5,6 +5,8 @@ import random
 
 def get_last_month_roaster():
     last_month = CoffeeRoaster.objects.filter(tags__name='Last Time').first()
+    if last_month is None:
+        return None
     return get_roaster(last_month.id)
 
 
