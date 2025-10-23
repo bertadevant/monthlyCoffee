@@ -18,8 +18,12 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views.generic import RedirectView
 
+def health_check(request):
+    return HttpResponse("OK")
+
 urlpatterns = [
     path("", RedirectView.as_view(url='/monthlycoffee/', permanent=False)),
     path("monthlycoffee/", include("monthlycoffee.urls")),
-    path("admin/", admin.site.urls)
+    path("admin/", admin.site.urls),
+    path('', health_check),
 ]
