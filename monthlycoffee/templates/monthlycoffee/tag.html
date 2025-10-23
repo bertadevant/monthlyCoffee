@@ -1,3 +1,7 @@
-{% if tag %}
-<li class="button small">{{ tag.name }}</li>
+{% if tags %}
+<ul class="actions small">
+    {% for tag in tags %}
+       <li class="button small action tag">{{ tag.name }}</li>
+    {% endfor %}
+</ul>
 {% endif %}

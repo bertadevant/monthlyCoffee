@@ -1,0 +1,79 @@
+.rating-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-container {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+.button.small.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.rating-stars-section {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.star-rating {
+    font-size: 3rem;
+    color: #ddd;
+}
+
+.star {
+    cursor: pointer;
+}
+
+.rating-textarea-section {
+    margin-bottom: 2rem;
+}
+
+.rating-textarea-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #000;
+    font-weight: bold;
+}
+
+.rating-textarea-section textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.rating-textarea-section small {
+    color: #666;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.rating-submit {
+    text-align: center;
+}
+
+.rating-submit .button.primary {
+    width: 100%;
+}

@@ -12,3 +12,8 @@ def transfer_last_time_tag(new_roaster_id, last_roaster_id):
 
     last_roaster.tags.remove(last_time_tag)
     new_roaster.tags.add(last_time_tag)
+
+def delete_new_tag_after_last_time_tag(roaster_id):
+    roaster = get_roasters_data.get_roaster(roaster_id)
+    new_tag = get_roasters_data.get_new_tag()
+    roaster.tags.remove(new_tag)

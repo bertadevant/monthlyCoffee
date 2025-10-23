@@ -1,7 +1,8 @@
 /* Custom CSS fixes for Coffee Club */
 
 /* Fix gallery grid layout - ensure items wrap properly */
-.gallery.style1 .inner {
+/* Only target the inner div that contains articles, not other .inner elements */
+.gallery.style1 > .inner {
     display: flex !important;
     flex-wrap: wrap !important;
     width: 100% !important;

@@ -1,3 +1,4 @@
+from .helper import get_object_or_none
 from .models import CoffeeRoaster, Tag
 from django.shortcuts import get_object_or_404
 import random
@@ -22,3 +23,6 @@ def get_next_roaster():
 
 def get_last_time_tag():
     return get_object_or_404(Tag, name='Last Time')
+
+def get_new_tag():
+    return get_object_or_none(Tag, name='New')
