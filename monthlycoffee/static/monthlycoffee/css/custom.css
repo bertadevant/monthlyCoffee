@@ -1,0 +1,14 @@
+/* Custom CSS fixes for Coffee Club */
+
+/* Fix gallery grid layout - ensure items wrap properly */
+.gallery.style1 .inner {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    overflow: visible !important;
+}
+
+.gallery.style1 article {
+    display: inline-block !important;
+    vertical-align: top !important;
+}

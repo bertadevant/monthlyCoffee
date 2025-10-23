@@ -5,7 +5,7 @@
     </div>
     <!-- Gallery -->
     <div class="gallery style1 small lightbox onscroll-fade-in"><div class="modal" tabindex="-1"><div class="inner"><img src=""></div></div><div class="forward"></div><div class="backward"></div>
-        <div class="inner" style="overflow: hidden;">
+        <div class="inner">
         {% for roaster in roasters %}
             {% include "monthlycoffee/gallery_article.html" with roaster=roaster %}
         {% endfor %}
